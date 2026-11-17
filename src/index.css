@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  @apply bg-bg text-ink antialiased;
+}
+* {
+  @apply border-line;
+}
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #slip,
+  #slip * {
+    visibility: visible;
+  }
+  #slip {
+    position: fixed;
+    inset: 0;
+    background: #fff;
+    padding: 24px;
+  }
+}
